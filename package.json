@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage":"." ,
+  "homepage":".",//travis持续构建之后发布到gh-pages后css,jss,img路径的问题
   "dependencies": {
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
