@@ -1,0 +1,37 @@
+
+language: node_js
+node_js: stable
+
+# S: Build Lifecycle
+install:
+  - npm install
+
+
+#before_script:
+ # - npm install -g gulp
+
+script:
+  - npm run build 
+
+after_script:
+  - cd ./dist
+  - git init
+  - git config user.name "wuhuanhost"
+  - git config user.email "post.thinking@gmail.com"
+  - git add .
+  - git commit -m "Update HAnimate"
+  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+# E: Build LifeCycle
+
+branches:
+  only:
+    - master
+
+#ª∫¥Ê≈‰÷√
+cache:
+  directories:
+    - node_modules
+
+env:
+ global:
+   - GH_REF: github.com/wuhuanhost/HAnimate.git
