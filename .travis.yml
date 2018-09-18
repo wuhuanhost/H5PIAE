@@ -14,7 +14,7 @@ script:
   - npm run build 
 
 after_script:
-  - cd ./dist
+  - cd ./build
   - git init
   - git config user.name "wuhuanhost"
   - git config user.email "post.thinking@gmail.com"
