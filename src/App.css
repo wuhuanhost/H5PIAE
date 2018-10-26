@@ -1,3 +1,20 @@
+html,body{
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+}
+
+*{
+  box-sizing:border-box;
+  /**解决控制台报错：[Intervention] Unable to preventDefault inside passive event listener due to target being treated as passive. See <URL>**/
+  /**资料:https://www.jianshu.com/p/04bf173826aa**/
+  /**可以提交一个bug修复合并，修复源码的文件在https://github.com/jrowny/react-absolute-grid/blob/master/lib/DragManager.js**/
+  touch-action: pan-y;
+}
+
+
+
 .App {
   text-align: center;
 }
